@@ -23,7 +23,7 @@ include __DIR__ . '/includes/header.php';
                 <tr><th class="text-muted w-25">Version</th><td><?= shift_e(SHIFT_VERSION) ?></td></tr>
                 <tr><th class="text-muted">Version IRI</th><td><code class="shift-mono"><?= shift_e(SHIFT_IRI_BASE) ?></code></td></tr>
                 <tr><th class="text-muted">Issued</th><td>2026</td></tr>
-                <tr><th class="text-muted">Creator</th><td>Brian O'Regan, Energy Informatics Group</td></tr>
+                <tr><th class="text-muted">Creator</th><td>Brian O'Regan, Energy Informatics Lead</td></tr>
                 <tr><th class="text-muted">Publisher</th><td>Tyndall National Institute / IERC, University College Cork</td></tr>
                 <tr><th class="text-muted">Licence</th><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td></tr>
             </table>

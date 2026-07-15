@@ -87,7 +87,7 @@ include __DIR__ . '/includes/header.php';
     <p class="text-muted small">If you use the SHIFT Ontology, please cite the project and this website.</p>
     <pre class="shift-mono p-3 rounded" style="background: rgba(31,61,122,0.06); font-size: 0.8rem; overflow-x: auto">@misc{shift-ontology,
   title  = {SHIFT: Semantic Hierarchy for Intelligent Flexibility and Trading},
-  author = {O'Regan, Brian and Energy Informatics Group},
+  author = {O'Regan, Brian and Energy Informatics Lead},
   year   = {2026},
   url    = {https://shift-ontology.org}
 }</pre>

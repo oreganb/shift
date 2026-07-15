@@ -23,7 +23,6 @@ class App {
         this.initPassword();
         this.initDismissible();
         this.initSidenav();
-        this.initTitleTextAnimation()
     }
 
     // Bootstrap Components
@@ -412,38 +411,6 @@ class App {
             if (t < 1) return c / 2 * t * t + b;
             t--;
             return -c / 2 * (t * (t - 2) - 1) + b;
-        }
-    }
-
-    // Title Text Animation
-    initTitleTextAnimation() {
-        const originalTitle = document.title;
-        const fullTitle = originalTitle + " — By Coderthemes — ";
-        let scrollIndex = 0;
-        let animationId;
-
-        function scrollTitle() {
-            if (!document.hidden) {
-                document.title = fullTitle.slice(scrollIndex) + fullTitle.slice(0, scrollIndex);
-                scrollIndex = (scrollIndex + 1) % fullTitle.length;
-                animationId = setTimeout(scrollTitle, 100);
-            }
-        }
-
-        function handleVisibilityChange() {
-            if (document.hidden) {
-                clearTimeout(animationId);
-                document.title = originalTitle; // Restore full title
-            } else {
-                scrollTitle(); // Restart animation
-            }
-        }
-
-        document.addEventListener("visibilitychange", handleVisibilityChange);
-
-        // Start animation if tab is visible
-        if (!document.hidden) {
-            scrollTitle();
         }
     }
 }

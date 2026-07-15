@@ -11,7 +11,7 @@ include __DIR__ . '/includes/header.php';
 
 <p>The <strong>SHIFT Ontology</strong> (Semantic Hierarchy for Intelligent Flexibility &amp; Trading) is a formal knowledge representation for flexibility services, transactive energy workflows, and grid–market interoperability.</p>
 
-<p><strong>Owner:</strong> Brian O'Regan, Energy Informatics Group, Tyndall National Institute / IERC, University College Cork.</p>
+<p><strong>Owner:</strong> Brian O'Regan, Energy Informatics Lead, Tyndall National Institute / IERC, University College Cork.</p>
 
 <p><strong>Funding:</strong> CET Partnership Cetp-FP2023-00114, EC GA 101069750, SEAI.</p>
 
@@ -20,7 +20,7 @@ include __DIR__ . '/includes/header.php';
 <h4 id="citation" style="color: var(--shift-navy)">Citation</h4>
 <pre class="shift-mono p-3 rounded" style="background: rgba(31,61,122,0.06); font-size: 0.85rem">@misc{shift-ontology-2026,
   title        = {SHIFT: Semantic Hierarchy for Intelligent Flexibility and Trading},
-  author       = {O'Regan, Brian and Energy Informatics Group},
+  author       = {O'Regan, Brian and Energy Informatics Lead},
   institution  = {Tyndall National Institute, IERC, University College Cork},
   year         = {2026},
   howpublished = {\url{https://shift-ontology.org}},
