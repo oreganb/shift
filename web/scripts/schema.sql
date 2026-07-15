@@ -1,5 +1,5 @@
--- SHIFT Ontology Website — MySQL schema (shared hosting)
--- Database must already exist (e.g. db1379071_shift1 on Blacknight)
+-- SHIFT Ontology Website — MySQL schema
+-- Create your database first, then run these table statements.
 
 CREATE TABLE IF NOT EXISTS ontology_classes (
     id          INT AUTO_INCREMENT PRIMARY KEY,

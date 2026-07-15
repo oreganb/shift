@@ -1,8 +1,8 @@
 <?php
-// Copy to config.local.php on the server — do NOT commit config.local.php
+// Copy to config.local.php on your server — do NOT commit config.local.php
 //
-// Blacknight shared hosting example:
-// define('DB_HOST', 'mysql4543int.cp.blacknight.com');
-// define('DB_NAME', 'db1379071_shift1');
-// define('DB_USER', 'u1379071_shift1');
-// define('DB_PASS', 'your_password_here');
+// Example (replace with your MySQL credentials):
+// define('DB_HOST', '127.0.0.1');
+// define('DB_NAME', 'shift_ontology');
+// define('DB_USER', 'your_db_user');
+// define('DB_PASS', 'your_db_password');

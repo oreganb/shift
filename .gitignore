@@ -8,14 +8,21 @@
 *.swp
 *~
 
-# Secrets — server only, never commit
+# Secrets and deployment — local/server only, never commit
 web/includes/config.local.php
 deploy.credentials
+deploy.credentials.*
+scripts/deploy-ftp.sh
 
-# Generated / copied from docs at deploy time — not committed
+# Server-only setup utilities (keep copies locally if needed)
+web/install.php
+web/setup.php
+
+# Generated / copied from docs at build time — not committed
 web/data/json/
 web/data/ontology/
 web/data/vault/
+web/downloads/*.zip
 
 # Node/build artefacts from template
 node_modules/

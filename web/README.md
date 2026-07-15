@@ -14,14 +14,16 @@ PHP + JavaScript + AJAX website for the SHIFT Ontology, built from the Simple ad
 ```bash
 cd web
 
-# Generate JSON from OWL modules and Obsidian vault
+# Copy ontology OWL modules and Obsidian vault into web/data/ (see below)
+# Then generate JSON:
 php scripts/build-ontology-json.php
 php scripts/build-vault-json.php
 php scripts/build-search-index.php
 
 # Optional: MySQL
-mysql -u root < scripts/schema.sql
-cp includes/config.local.example.php includes/config.local.php  # edit credentials
+mysql -u root -e "CREATE DATABASE IF NOT EXISTS shift_ontology"
+mysql -u root shift_ontology < scripts/schema.sql
+cp includes/config.local.example.php includes/config.local.php   # add credentials locally
 php scripts/import-db.php
 
 # Run locally
@@ -30,12 +32,15 @@ php -S localhost:8080 -t .
 
 Open http://localhost:8080
 
-## Data sources
+## Data layout
 
-| Source | Location |
-|--------|----------|
-| OWL modules | `docs/SHIFT owl/`, `docs/Reasoning Rules/` → copied to `web/data/ontology/` |
-| Knowledge Graph vault | `docs/SHIFT_Ontology_KG.zip` → extracted to `web/data/vault/` |
+Place source content under `web/data/` before building JSON:
+
+| Content | Path |
+|---------|------|
+| OWL modules | `web/data/ontology/*.owl` |
+| Obsidian vault | `web/data/vault/SHIFT Ontology/` |
+| Generated JSON | `web/data/json/` (created by build scripts) |
 | Logo | `web/images/SHIFT_Logo.png` |
 
 ## Routes
@@ -60,6 +65,8 @@ Open http://localhost:8080
 
 ## Design
 
-Palette from SHIFT logo (SPECS §7): navy `#1F3D7A`, amber `#F5A623`, green `#4A9440`, blue `#2E62B0`.
+Palette from SHIFT logo: navy `#1F3D7A`, amber `#F5A623`, green `#4A9440`, blue `#2E62B0`.
 
-See `docs/SPECS.md` for full product specification.
+## Deployment
+
+Do not commit server credentials or FTP/deploy scripts. Configure `includes/config.local.php` on the host only (gitignored).
