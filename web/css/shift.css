@@ -1,0 +1,283 @@
+/* SHIFT Ontology — design tokens from logo (SPECS §7) */
+:root {
+    --shift-navy: #1F3D7A;
+    --shift-navy-2: #162C5C;
+    --shift-amber: #F5A623;
+    --shift-green: #4A9440;
+    --shift-blue: #2E62B0;
+    --shift-offwhite: #FAFAF7;
+    --shift-ink: #1A2440;
+}
+
+.shift-body {
+    background: var(--shift-offwhite);
+    color: var(--shift-ink);
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.shift-topbar {
+    background: var(--shift-navy) !important;
+    border-bottom: 3px solid var(--shift-amber);
+}
+
+.shift-nav-link {
+    color: rgba(250, 250, 247, 0.85);
+    text-decoration: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.15s;
+}
+
+.shift-nav-link:hover,
+.shift-nav-link.active {
+    color: #fff;
+    background: var(--shift-navy-2);
+}
+
+.shift-nav-link.active {
+    box-shadow: inset 0 -2px 0 var(--shift-amber);
+}
+
+.shift-btn-search {
+    background: var(--shift-amber);
+    color: var(--shift-navy-2);
+    border: none;
+    font-weight: 600;
+}
+
+.shift-btn-search:hover {
+    background: #e09515;
+    color: var(--shift-navy-2);
+}
+
+.shift-badge-version {
+    background: var(--shift-navy-2);
+    color: var(--shift-offwhite);
+}
+
+.shift-hero {
+    background: linear-gradient(135deg, var(--shift-navy) 0%, var(--shift-navy-2) 100%);
+    color: var(--shift-offwhite);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.shift-hero h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+.shift-btn-primary {
+    background: var(--shift-amber);
+    color: var(--shift-navy-2);
+    border: none;
+    font-weight: 600;
+    padding: 0.6rem 1.25rem;
+}
+
+.shift-btn-primary:hover {
+    background: #e09515;
+    color: var(--shift-navy-2);
+}
+
+.shift-btn-outline {
+    border: 2px solid var(--shift-offwhite);
+    color: var(--shift-offwhite);
+    background: transparent;
+    font-weight: 600;
+    padding: 0.6rem 1.25rem;
+}
+
+.shift-btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.shift-card {
+    border: 1px solid rgba(31, 61, 122, 0.12);
+    border-radius: 10px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    height: 100%;
+}
+
+.shift-card:hover {
+    box-shadow: 0 8px 24px rgba(31, 61, 122, 0.12);
+    transform: translateY(-2px);
+}
+
+.shift-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.shift-card-icon.navy { background: var(--shift-navy); }
+.shift-card-icon.green { background: var(--shift-green); }
+.shift-card-icon.amber { background: var(--shift-amber); color: var(--shift-navy-2); }
+.shift-card-icon.blue { background: var(--shift-blue); }
+
+.shift-version-card {
+    border-left: 4px solid var(--shift-amber);
+    background: #fff;
+}
+
+.shift-mono, code.shift-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.875em;
+    background: rgba(31, 61, 122, 0.06);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+}
+
+.shift-footer {
+    background: var(--shift-navy-2);
+    color: rgba(250, 250, 247, 0.7);
+}
+
+.shift-footer a {
+    color: var(--shift-amber);
+}
+
+.wiki-link {
+    color: var(--shift-blue);
+    text-decoration: underline dotted;
+}
+
+.wiki-link-unresolved {
+    color: var(--shift-amber);
+    border-bottom: 1px dashed var(--shift-amber);
+}
+
+.shift-markdown h3, .shift-markdown h4, .shift-markdown h5 {
+    color: var(--shift-navy);
+    margin-top: 1.25rem;
+}
+
+.shift-table th {
+    background: var(--shift-navy);
+    color: #fff;
+}
+
+.shift-class-diagram {
+    max-height: 140px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.shift-tree li {
+    margin: 0.15rem 0;
+}
+
+.shift-tree a {
+    color: var(--shift-blue);
+    text-decoration: none;
+}
+
+.shift-tree a:hover {
+    text-decoration: underline;
+}
+
+/* Knowledge Graph viewer */
+.kg-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr 300px;
+    gap: 0;
+    height: calc(100vh - 120px);
+    min-height: 500px;
+    border: 1px solid rgba(31,61,122,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.kg-pane {
+    overflow: auto;
+    border-right: 1px solid rgba(31,61,122,0.1);
+}
+
+.kg-pane:last-child {
+    border-right: none;
+    border-left: 1px solid rgba(31,61,122,0.1);
+}
+
+.kg-tree-item {
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    border-radius: 4px;
+}
+
+.kg-tree-item:hover, .kg-tree-item.active {
+    background: rgba(46, 98, 176, 0.1);
+    color: var(--shift-blue);
+}
+
+.kg-tree-folder {
+    font-weight: 600;
+    color: var(--shift-navy);
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.kg-note-meta {
+    background: rgba(31, 61, 122, 0.04);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid rgba(31,61,122,0.08);
+}
+
+.kg-graph-canvas {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.kg-backlink {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(31,61,122,0.08);
+    font-size: 0.875rem;
+}
+
+.search-result-item {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(31,61,122,0.08);
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.search-result-item:hover {
+    background: rgba(245, 166, 35, 0.1);
+}
+
+.search-result-kind {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--shift-navy);
+    opacity: 0.7;
+}
+
+.rule-badge-executable { background: var(--shift-green); }
+.rule-badge-partial { background: var(--shift-amber); color: var(--shift-navy-2); }
+.rule-badge-spec { background: #6B7280; }
+
+@media (max-width: 1199px) {
+    .kg-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .kg-pane-sidebar, .kg-pane-backlinks {
+        max-height: 240px;
+    }
+}

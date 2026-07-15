@@ -1,0 +1,22 @@
+# Content sources — not deployed, not committed
+/docs/
+/template/
+
+# OS / editor
+.DS_Store
+.qodo/
+*.swp
+*~
+
+# Secrets — server only, never commit
+web/includes/config.local.php
+deploy.credentials
+
+# Generated / copied from docs at deploy time — not committed
+web/data/json/
+web/data/ontology/
+web/data/vault/
+
+# Node/build artefacts from template
+node_modules/
+dist/
